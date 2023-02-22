@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Responsive Images</title>
+        
+        <style>
+            .resp {
+                width: 100vmin;
+                height: 100vmin;
+            }
+
+            .imagespot {
+                width: 100vmin;
+                height: 100vmin;  /* exact dimension of image */
+                background: #ffffff url(assets/ski.jpg) top left no-repeat;
+            }
+
+            p {
+                width: 300px;
+                height: 100px;
+                background-color: green;
+            }
+        </style>
+
+    </head>
+
+    <body>
+
+        <div class="imagespot">
+            ini teks diatas gambar ski
+        </div>
+        
+        <img class="resp" src="assets/ski.jpg">
+        <h1>Touch Events</h1>
+        <p>This is a paragraph</p>
+
+        <script>
+            document.querySelector('p').addEventListener('touchstart', f);
+            document.querySelector('p').addEventListener('touchend',f);
+            document.querySelector('p').addEventListener('touchmove',f);
+        
+            function f(ev) {
+            console.log( ev.touches, ev.type );
+            }
+        </script>
+
+    </body>
+  
+</html>
